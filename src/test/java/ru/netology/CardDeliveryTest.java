@@ -13,7 +13,7 @@ public class CardDeliveryTest {
 
     CurrentLocalDate CurrentLocalDate = new CurrentLocalDate();
     public String date = CurrentLocalDate.localDateTime();
-    public Keys del = Keys.DELETE;
+
 
 
     @Test
