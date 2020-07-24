@@ -11,9 +11,8 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CardDeliveryTest {
 
-    CurrentLocalDate CurrentLocalDate = new CurrentLocalDate();
-    public String date = CurrentLocalDate.localDateTime();
-
+    CurrentLocalDate currentLocalDate = new CurrentLocalDate();
+    public String date = currentLocalDate.localDateTime();
 
 
     @Test
