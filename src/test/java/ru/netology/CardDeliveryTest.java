@@ -86,7 +86,7 @@ public class CardDeliveryTest {
         $("[name=name]").setValue("Иван");
         $("[name=phone]").setValue("+79111488111");
         $(byText("Забронировать")).click();
-        $("[role=presentation]").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+        $("[data-test-id=agreement].input_invalid").shouldHave(text("Я соглашаюсь с условиями"));
     }
 
     @Test
@@ -98,7 +98,7 @@ public class CardDeliveryTest {
         $("[name=phone]").setValue("+79111488188");
         $("[data-test-id=agreement]").click();
         $(byText("Забронировать")).click();
-        $("[data-test-id=date] .input__sub").shouldHave(text("Неверно введена дата"), cssValue("color", "rgba(255, 92, 92, 1)"));
+        $("[data-test-id=date] .input_invalid").shouldHave(text("Неверно введена дата"));
     }
 
 
